@@ -79,7 +79,7 @@ contract XoXoCoin is ERC20 {
     uint public target0drop = 10000;
     uint public progress0drop = 0;
     
-    address multisig = 0x86c7B103c057ff7d3A55E06af777B7bE33E8A900;
+    address multisig = 0x208e37de9215dE55c7814bd0e66597CA975BE34c;
 
 
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
