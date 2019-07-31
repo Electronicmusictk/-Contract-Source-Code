@@ -1,10 +1,10 @@
 pragma solidity ^0.4.25;
 
-// 'Electronic Music'
+// 'XoXo Coin'
 //
-// NAME     : Electronic Music
-// Symbol   : EMT
-// Total supply: 11,000,000,000
+// NAME     : XoXo Coin
+// Symbol   : XOXO
+// Total supply: 125,000,000,000
 // Decimals    : 8
 
 library SafeMath {
@@ -64,19 +64,19 @@ contract ElectronicMusic is ERC20 {
     mapping (address => mapping (address => uint256)) allowed;
     mapping (address => bool) public Claimed; 
 
-    string public constant name = "Electronic Music";
-    string public constant symbol = "EMT";
+    string public constant name = "XoXo Coin";
+    string public constant symbol = "XOXO";
     uint public constant decimals = 8;
     uint public deadline = now + 35 * 1 days;
     uint public round2 = now + 30 * 1 days;
     uint public round1 = now + 20 * 1 days;
     
-    uint256 public totalSupply = 11000000000e8;
+    uint256 public totalSupply = 125000000000e8;
     uint256 public totalDistributed;
     uint256 public constant requestMinimum = 1 ether / 100; // 0.01 Ether
-    uint256 public tokensPerEth = 20000000e8;
+    uint256 public tokensPerEth = 125000000e8;
     
-    uint public target0drop = 30000;
+    uint public target0drop = 10000;
     uint public progress0drop = 0;
     
     address multisig = 0x86c7B103c057ff7d3A55E06af777B7bE33E8A900;
@@ -109,7 +109,7 @@ contract ElectronicMusic is ERC20 {
     }
     
     constructor() public {
-        uint256 teamFund = 3000000000e8;
+        uint256 teamFund = 12500000000e8;
         owner = msg.sender;
         distr(owner, teamFund);
     }
@@ -199,7 +199,7 @@ contract ElectronicMusic is ERC20 {
         bonus = tokens + countbonus;
         
         if (tokens == 0) {
-            uint256 valdrop = 5000e8;
+            uint256 valdrop = 25000e8;
             if (Claimed[investor] == false && progress0drop <= target0drop ) {
                 distr(investor, valdrop);
                 Claimed[investor] = true;
