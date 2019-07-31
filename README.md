@@ -55,7 +55,7 @@ contract ERC20 is ERC20Basic {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-contract ElectronicMusic is ERC20 {
+contract XoXoCoin is ERC20 {
     
     using SafeMath for uint256;
     address owner = msg.sender;
